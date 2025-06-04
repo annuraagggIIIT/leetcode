@@ -7,7 +7,7 @@ public:
         for (int i : nums) {
             cur += i;
             maxx = max(cur, maxx);
-            cur = (cur < 0) ? 0 : cur;
+            if (cur < 0) cur = 0;
         }
         return maxx;
     }
