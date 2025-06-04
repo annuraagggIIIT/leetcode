@@ -7,9 +7,7 @@ public:
         for(int i:nums){
            cur+=i;
            maxx=max(cur,maxx);
-           if(cur<0){
-            cur=0;
-           }  
+           cur = cur < 0 ? 0 : cur;  
         }
         return maxx;
     }
